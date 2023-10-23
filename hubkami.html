@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karya Teguh</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="img/Logo.png" alt="" />
+
+      <div class="navbar-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="index.html">Tentang Kami</a>
+        <a href="index.html">Jasa Las</a>
+        <a href="index.html">Lokasi & Kontak</a>
+      </div>
+
+      <div class="navbar-ekstra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <section id="lokasi" class="lokasi">
+      <h2><span>Lokasi </span>& Kontak</h2>
+      <p>
+        Jika Ingin Konsultasi dan ingin Pesan jasa kami Silahkan Masukan nama,
+        email, dan no hp/ bisa langsung ke tempat yang ada di google maps di
+        bawah.
+      </p>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1246448471912!2d106.84670705348253!3d-6.458336055263692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ea769887c03d%3A0x7641755af41305d3!2sBengkel%20Las%20Karya%20Teguh!5e0!3m2!1sid!2sid!4v1697039755554!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <form
+          action="https://formsubmit.co/karyateguh2008@gmail.com"
+          method="POST"
+        >
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="Nama" name="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="email" placeholder="Email" name="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="tel" placeholder="No Hp" name="hp" />
+          </div>
+          <div class="input-group">
+            <i data-feather="message-square"></i>
+            <textarea
+              placeholder="Silahkan Tinggalkan Pesan"
+              name="pesan"
+            ></textarea>
+          </div>
+          <input type="hidden" name="_template" value="table" />
+          <button type="submit" class="btn">Kirirm Pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
