@@ -206,30 +206,26 @@
           class="map"
         ></iframe>
 
-        <form
-          action="https://formsubmit.co/karyateguh2008@gmail.com"
-          method="POST"
-        >
+        <form onsubmit="sendEmail(); reset(); return false;">
           <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="Nama" name="nama" />
+            <input type="text" placeholder="Nama" id="nama" />
           </div>
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="email" placeholder="Email" name="email" />
+            <input type="email" placeholder="Email" id="email" />
           </div>
           <div class="input-group">
             <i data-feather="phone"></i>
-            <input type="tel" placeholder="No Hp" name="hp" />
+            <input type="tel" placeholder="No Hp" id="hp" />
           </div>
           <div class="input-group">
             <i data-feather="message-square"></i>
             <textarea
               placeholder="Silahkan Tinggalkan Pesan"
-              name="pesan"
+              id="pesan"
             ></textarea>
           </div>
-          <input type="hidden" name="_template" value="table" />
           <button type="submit" class="btn">Kirirm Pesan</button>
         </form>
       </div>
@@ -296,5 +292,27 @@
 
     <!-- Javascript -->
     <script src="js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "karyateguh2008@gmail.com",
+          Password: "karyateguh25062008",
+          To: "karyateguh2008@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "New Contact Form Enquiry",
+          Body:
+            "name: " +
+            document.getElementById("name").value +
+            "<br> Email: " +
+            document.getElementById("email").value +
+            "<br> No hp: " +
+            document.getElementById("hp").value +
+            "<br> Pesan: " +
+            document.getElementById("pesan").value,
+        }).then((message) => alert("Pesan Terkirim"));
+      }
+    </script>
   </body>
 </html>
